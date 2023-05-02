@@ -1,13 +1,111 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Abril Fatface', cursive;
+  font-family: 'Nunito', sans-serif;
+  font-family: 'Ramabhadra', sans-serif;
+  font-family: 'Secular One', sans-serif;
+  font-family: 'Sigmar', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: radial-gradient(#272727, #1b1b1b);
+  color: black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --gold: #ffb338;
+  --light-shadow: #77571d;
+  --dark-shadow: #3e2904;
+}
+body {
+  margin: 0;
+}
+.wrapper {
+  
+  display: grid;
+  grid-template-areas: 'overlap';
+  place-content: center;
+  text-transform: uppercase;
+  height: 30vh;
+}
+.wrapper > div {
+  background-clip: text;  
+  -webkit-background-clip: text;
+  color: #363833;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: clamp( 2em, 12vw, 10rem);
+  grid-area: overlap;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 4px transparent;
+}
+div.bg {
+  background-image: repeating-linear-gradient( 105deg, 
+    var(--gold) 0% , 
+    var(--dark-shadow) 5%,
+    var(--gold) 12%);
+  color: transparent;
+  filter: drop-shadow(5px 15px 15px black);
+  transform: scaleY(1.05);
+  transform-origin: top;
+}
+div.fg{
+  background-image: repeating-linear-gradient( 5deg,  
+    var(--gold) 0% , 
+    var(--light-shadow) 23%, 
+    var(--gold) 31%);
+  color: #1e2127;
+  transform: scale(1);
+}
+div.sh{
+  font-size: larger;
+  letter-spacing: .1rem;
+  background-image: repeating-linear-gradient( 5deg,  
+  var(--gold) 0% , 
+  var(--light-shadow) 23%, 
+  var(--gold) 31%);
+color: #000000;
+transform: scale(1);
+}
+div.responses{
+  color: #ffb338;
+  letter-spacing: .1rem;
+}
+div.big-response{
+  font-size: xxx-large;
+}
+div.footer{
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
+}
+input[type=text] {
+  width: 40%;
+  font-weight: bold;
+  padding: 4px 12px;
+  margin: 4px 0;
+  box-sizing: border-box;
+  background-color: black;
+  color: #ffb338;
+  font-size: medium;
+}
+input[type=text]:focus {
+  border: 3px solid #ffb338;
+}
+
+h2{
+  font-family: 'Bebas Neue', cursive;
+  font-size: xx-large;
+  text-shadow: 2px 2px black;
+  color: #ffb338;
+  letter-spacing: .2rem;
 }
