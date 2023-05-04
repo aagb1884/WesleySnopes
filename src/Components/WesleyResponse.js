@@ -1,14 +1,16 @@
 const WesleyResponse = () => {
 
     const responses = [
-        "Yeah that sounds legit",
-        "SHIT OF A BULL",
-        "We're on the train to fact-ville baby",
-        "BALDERDASH",
-        "Wesley's thirst for truth has been quenched",
-        "Why not?",
-        "That's in Wesley's Factionary",
-        "PISH",
+        require('../images/sorry_what.png'),
+        require('../images/train_to_factville.png'),
+        require('../images/blade.png'),
+
+        // "BALDERDASH",
+        // "Wesley's thirst for truth has been quenched",
+        // "That's in Wesley's Factionary",
+        // "PISH",
+        // "Yeah that sounds legit",
+        // "SHIT OF A BULL",
     ];
 
     function get_random_response(responses) {
@@ -23,7 +25,8 @@ const WesleyResponse = () => {
         <div className="responses">
         <h3>Wesley's Response:</h3>
         <div className="big-response">
-        <p>{result}</p>
+        <img src={result} alt="You Should Be Seeing An Image of Wesley Snipes But Are Not" style={{height:500, width:600}}/>
+        {/* <img src={result} alt="You Should Be Seeing An Image of Wesley Snipes"></img> */}
         </div>
         </div>
         </>
@@ -31,3 +34,4 @@ const WesleyResponse = () => {
 }
  
 export default WesleyResponse;
+

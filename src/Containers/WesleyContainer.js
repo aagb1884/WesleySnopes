@@ -8,7 +8,7 @@ const WesleyContainer = () => {
         <>
         <WesleyForm />
         <WesleyResponse />
-        <WesleyFooter />
+        {/* <WesleyFooter /> */}
         </>
 
      );
