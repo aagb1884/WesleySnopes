@@ -1,4 +1,5 @@
 import './App.css';
+import WesleyFooter from './Components/WesleyFooter';
 import WesleyHeader from "./Components/WesleyHeader";
 import WesleyContainer from './Containers/WesleyContainer';
 
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <WesleyHeader />
       <WesleyContainer />
+      <WesleyFooter />
     </div>
   );
 }

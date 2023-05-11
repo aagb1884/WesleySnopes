@@ -1,11 +1,11 @@
 const WesleyHeader = () => {
     return ( 
         <>
-        <div class="wrapper">
-        <div class="bg"> WESLEY SNOPES </div>
-        <div class="fg"> WESLEY SNOPES </div>
+        <div className="wrapper">
+        <div className="bg"> WESLEY SNOPES </div>
+        <div className="fg"> WESLEY SNOPES </div>
         </div>
-        <div class="sh">A fact-checking service</div>
+        <div className="sh">A fact-checking service</div>
         <br />
         </>
      );
