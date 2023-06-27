@@ -17,6 +17,7 @@
 .env.development.local
 .env.test.local
 .env.production.local
+/captions_to_be_added
 
 npm-debug.log*
 yarn-debug.log*
