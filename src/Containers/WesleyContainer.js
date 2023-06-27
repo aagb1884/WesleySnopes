@@ -15,6 +15,18 @@ const WesleyContainer = () => {
         'images/pish.png',
         'images/thirst_for_truth.png',
         'images/truth_beauty.png',
+        'images/back_bullshit.png',
+        'images/fuck_off.png',
+        'images/no.png',
+        'images/way_u_think.png',
+        'images/squint.png',
+        'images/question_makes_me_sad.png',
+        'images/nonsense.png',
+        'images/shame.png',
+        'images/true.png',
+        'images/small_no.png',
+        'images/gosh.png',
+        'images/cow_bumhole.png'
     ];
 
     const [image, setImage] = useState(null)
