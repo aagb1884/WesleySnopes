@@ -31,18 +31,19 @@ const WesleyContainer = () => {
     }
 
     return ( 
-        <form>
-            <label for="user-query"><h2>Hey Wesley, I heard...</h2></label>
-            <input type="text" id="user-query" name="user-query" maxlength="1000"></input>
-            <h2>Is that true?</h2>
-            <button onClick={get_random_response}>CLICK ME DADDY</button>
-            <br />
-            <br />
-            <section>
-            {image && <img src={image} alt="Wesley's Response" />}
-            </section>
+        <main>
+            <form>
+                <label for="user-query"><h2>Hey Wesley, I heard...</h2></label>
+                <input type="text" id="user-query" name="user-query" maxlength="1000"></input>
+                <h2>Is that true?</h2>
+                <button onClick={get_random_response}>CLICK ME DADDY</button>
+                <br />
+                <br />
+                <section>
+                {image && <img src={image} alt="Wesley's Response" />}
+                </section>
             </form>
-
+        </main>
      );
 }
  

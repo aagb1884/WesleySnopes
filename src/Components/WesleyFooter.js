@@ -1,8 +1,8 @@
 const WesleyFooter = () => {
     return ( 
-        <div className="footer">
+        <footer>
         <div class="sh">DISCLAIMER: I have never seen nor read Blade.</div>
-        </div>
+        </footer>
      );
 }
  
