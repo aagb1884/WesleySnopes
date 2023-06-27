@@ -8,3 +8,14 @@
   color: #61dafb;
 }
 
+img{
+  display: block;
+  max-width: 500px;
+  width: auto;
+  height: auto;
+}
+
+section{
+  display: flex;
+  justify-content: center;
+}

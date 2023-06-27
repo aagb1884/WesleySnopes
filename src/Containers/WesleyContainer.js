@@ -1,5 +1,3 @@
-import WesleyForm from "../Components/WesleyForm";
-import WesleyResponse from "../Components/WesleyResponse";
 import { useState, useEffect } from 'react';
 
 const WesleyContainer = () => {
@@ -19,7 +17,7 @@ const WesleyContainer = () => {
         'images/truth_beauty.png',
     ];
 
-    const [image, setImage] = useState("")
+    const [image, setImage] = useState(null)
 
     useEffect(()=>{
         get_random_response()
@@ -33,12 +31,17 @@ const WesleyContainer = () => {
     }
 
     return ( 
-        <>
-        <button onClick={get_random_response}>Random Image</button>
-      {image && <img src={image} alt="Wesley Snipes' Response" />}
-        {/* <WesleyForm setImage={setImage}/>
-        { onClick ? <WesleyResponse image={image}/> : null } */}
-        </>
+        <form>
+            <label for="user-query"><h2>Hey Wesley, I heard...</h2></label>
+            <input type="text" id="user-query" name="user-query" maxlength="1000"></input>
+            <h2>Is that true?</h2>
+            <button onClick={get_random_response}>CLICK ME DADDY</button>
+            <br />
+            <br />
+            <section>
+            {image && <img src={image} alt="Wesley's Response" />}
+            </section>
+            </form>
 
      );
 }
