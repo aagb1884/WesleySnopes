@@ -30,6 +30,7 @@ const WesleyContainer = () => {
     ];
 
     const [image, setImage] = useState("")
+    const [userQuery, setUserQuery] = useState('');
 
     function get_random_response() {
         const randomIndex = Math.floor(Math.random()* imgsrcs.length);
@@ -38,11 +39,20 @@ const WesleyContainer = () => {
         console.log("why does this not work?")
     }
 
+    function handleInputChange(event) {
+        setUserQuery(event.target.value);
+      }
+
+      function handleClear() {
+        setUserQuery('');
+        setImage('');
+      }
+
     return ( 
         <main>
             <form>
                 <label htmlFor="user-query"><h2>Hey Wesley, I heard...</h2></label>
-                <input type="text" id="user-query" name="user-query" maxLength="1000"></input>
+                <input type="text" id="user-query" name="user-query" maxLength="1000" onChange={handleInputChange}></input>
                 <h2>Is that true?</h2>
                 <button onClick={get_random_response}>CLICK ME DADDY</button>
                 <br />
@@ -51,6 +61,7 @@ const WesleyContainer = () => {
                     {/* {image ? (<img src={image} alt="Wesley's Response" /> ) : ""} */}
                 {image && <img src={image} alt="Wesley's Response" />}
                 </section>
+                <button onClick={handleClear}>Clear</button>
             </form>
         </main>
      );
