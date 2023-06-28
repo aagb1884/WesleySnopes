@@ -29,29 +29,26 @@ const WesleyContainer = () => {
         'images/cow_bumhole.png'
     ];
 
-    const [image, setImage] = useState(null)
-
-    useEffect(()=>{
-        get_random_response()
-    }, [])
+    const [image, setImage] = useState("")
 
     function get_random_response() {
         const randomIndex = Math.floor(Math.random()* imgsrcs.length);
         const selectedImage = imgsrcs[randomIndex]
         setImage(selectedImage)
-
+        console.log("why does this not work?")
     }
 
     return ( 
         <main>
             <form>
-                <label for="user-query"><h2>Hey Wesley, I heard...</h2></label>
-                <input type="text" id="user-query" name="user-query" maxlength="1000"></input>
+                <label htmlFor="user-query"><h2>Hey Wesley, I heard...</h2></label>
+                <input type="text" id="user-query" name="user-query" maxLength="1000"></input>
                 <h2>Is that true?</h2>
                 <button onClick={get_random_response}>CLICK ME DADDY</button>
                 <br />
                 <br />
                 <section>
+                    {/* {image ? (<img src={image} alt="Wesley's Response" /> ) : ""} */}
                 {image && <img src={image} alt="Wesley's Response" />}
                 </section>
             </form>
