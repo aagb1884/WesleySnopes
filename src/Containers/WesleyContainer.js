@@ -31,12 +31,13 @@ const WesleyContainer = () => {
 
     const [image, setImage] = useState("")
     const [userQuery, setUserQuery] = useState('');
+    const [buttonClicked, setButtonClicked] = useState(false);
 
     function get_random_response() {
         const randomIndex = Math.floor(Math.random()* imgsrcs.length);
         const selectedImage = imgsrcs[randomIndex]
         setImage(selectedImage)
-        console.log("why does this not work?")
+        setButtonClicked(true);
     }
 
     function handleInputChange(event) {
@@ -46,23 +47,33 @@ const WesleyContainer = () => {
       function handleClear() {
         setUserQuery('');
         setImage('');
+        setButtonClicked(false);
       }
+
+      useEffect(()=>{
+        if (buttonClicked) {
+            get_random_response()
+        }
+    }, [buttonClicked])
 
     return ( 
         <main>
             <form>
                 <label htmlFor="user-query"><h2>Hey Wesley, I heard...</h2></label>
+                <div className='interface-layout'>
                 <input type="text" id="user-query" name="user-query" maxLength="1000" onChange={handleInputChange}></input>
-                <h2>Is that true?</h2>
+                <button onClick={handleClear}>Clear</button>
+                </div>
+            </form>
+            <h2>Is that true?</h2>
                 <button onClick={get_random_response}>CLICK ME DADDY</button>
                 <br />
                 <br />
                 <section>
-                    {/* {image ? (<img src={image} alt="Wesley's Response" /> ) : ""} */}
                 {image && <img src={image} alt="Wesley's Response" />}
                 </section>
-                <button onClick={handleClear}>Clear</button>
-            </form>
+                
+            
         </main>
      );
 }

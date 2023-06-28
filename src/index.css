@@ -1,9 +1,5 @@
 body {
   margin: 0;
-  font-family: 'Abril Fatface', cursive;
-  font-family: 'Nunito', sans-serif;
-  font-family: 'Ramabhadra', sans-serif;
-  font-family: 'Secular One', sans-serif;
   font-family: 'Sigmar', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -75,6 +71,16 @@ div.sh{
 color: #000000;
 transform: scale(1);
 }
+div.ftr{
+  font-size: larger;
+  letter-spacing: .1rem;
+  background-image: repeating-linear-gradient( 5deg,  
+  var(--gold) 0% , 
+  var(--light-shadow) 23%, 
+  var(--gold) 31%);
+color: #000000;
+transform: scale(1);
+}
 div.responses{
   color: #ffb338;
   letter-spacing: .1rem;
@@ -108,4 +114,28 @@ h2{
   text-shadow: 2px 2px black;
   color: #ffb338;
   letter-spacing: .2rem;
+}
+
+@media only screen and (max-width: 500px) {
+  h2{
+    font-size: 22px;
+  }
+body{
+  font-size: 14px;
+}
+div.sh{
+  max-width: 500px;
+  margin: 0 auto;
+}
+div.ftr{
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 18px;
+  overflow-wrap: anywhere;
+}
+:root {
+  --gold: #ffb338;
+  --light-shadow: #9d7327;
+  --dark-shadow: #794f05;
+}
 }
