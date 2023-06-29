@@ -61,12 +61,12 @@ const WesleyContainer = () => {
             <form>
                 <label htmlFor="user-query"><h2>Hey Wesley, I heard...</h2></label>
                 <div className='interface-layout'>
-                <input type="text" id="user-query" name="user-query" maxLength="1000" onChange={handleInputChange}></input>
-                <button onClick={handleClear}>Clear</button>
+                <textarea type="text" className='user-query' id="user-query" name="user-query" maxLength="1000" onChange={handleInputChange}></textarea>
+                <button onClick={handleClear} title="Clears All Text and Images">Clear</button>
                 </div>
             </form>
             <h2>Is that true?</h2>
-                <button onClick={get_random_response}>CLICK ME DADDY</button>
+                <button onClick={get_random_response} title="Click here to find out THE TRUTH">CLICK ME DADDY</button>
                 <br />
                 <br />
                 <section>
