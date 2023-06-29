@@ -65,8 +65,8 @@ const WesleyContainer = () => {
                 <button onClick={handleClear} title="Clears All Text and Images">Clear</button>
                 </div>
             </form>
-            <h2>Is that true?</h2>
-                <button onClick={get_random_response} title="Click here to find out THE TRUTH">CLICK ME DADDY</button>
+            <br  />
+                <button onClick={get_random_response} className="truth" title="Click here to find out THE TRUTH">IS THAT TRUE?</button>
                 <br />
                 <br />
                 <section>

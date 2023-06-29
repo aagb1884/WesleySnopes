@@ -41,6 +41,15 @@ main{
   font-size: larger;
 }
 
+.truth{
+  background-color:#ffb338;
+  color: #1b1b1b;
+  font-weight: bold;
+  font-size: xx-large;
+  border-radius: 5px;
+  box-shadow: 2px 4px #aa7012;
+}
+
 footer{
   position: absolute;
   bottom: 0;
