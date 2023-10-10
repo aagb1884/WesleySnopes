@@ -42,6 +42,7 @@ const WesleyContainer = () => {
 
     function handleInputChange(event) {
         setUserQuery(event.target.value);
+        console.log(event.target.value)
       }
 
       function handleClear() {
@@ -61,12 +62,12 @@ const WesleyContainer = () => {
             <form>
                 <label htmlFor="user-query"><h2>Hey Wesley, I heard...</h2></label>
                 <div className='interface-layout'>
-                <textarea type="text" className='user-query' id="user-query" name="user-query" maxLength="1000" onChange={handleInputChange}></textarea>
-                <button onClick={handleClear} title="Clears All Text and Images">Clear</button>
+                <textarea type="text" data-testid="text-input" className='user-query' id="user-query" name="user-query" maxLength="1000" onChange={handleInputChange}></textarea>
+                <button onClick={handleClear} data-testid="clear-text-button" title="Clears All Text and Images">Clear</button>
                 </div>
             </form>
             <br  />
-                <button onClick={get_random_response} className="truth" title="Click here to find out THE TRUTH">IS THAT TRUE?</button>
+                <button onClick={get_random_response} data-testid="get-truth" className="truth" title="Click here to find out THE TRUTH">IS THAT TRUE?</button>
                 <br />
                 <br />
                 <section>
