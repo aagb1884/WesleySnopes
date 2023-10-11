@@ -34,9 +34,7 @@ describe("WesleyContainer", () => {
     fireEvent.click(clearButton);
     const containerInput = container.getByTestId("text-input");
     expect(containerInput.value).toBe('');
-    // this button works on the localhost version, on the live version, but not properly on the test version
-    // if you add the code from the above test to the start of this one, the value is 'Test query' even when
-    // you press the clear button. So it works for the user but not in testing.
+   
   });
 
 })
