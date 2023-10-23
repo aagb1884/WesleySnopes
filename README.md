@@ -30,6 +30,6 @@ You may also see any lint errors in the console.
 
 ### Alternatively
 
-You can just view the app [here](https://wesleysnopes.surge.sh/).
+You can just view the app [here](https://andrewblair.co.uk/apps/wesley-snopes).
 
 
