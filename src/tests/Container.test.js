@@ -10,7 +10,7 @@ describe("WesleyContainer", () => {
   });
 
   it("should get_random_response when IS THAT TRUE button is clicked", () => {
-    const truthButton = container.getByTestId("get-truth");
+    const truthButton = container.getByTestId("get-truth");np
     fireEvent.click(truthButton);
     expect(truthButton).toHaveClass('truth')
   });

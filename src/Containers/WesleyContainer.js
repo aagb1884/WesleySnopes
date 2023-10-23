@@ -42,7 +42,6 @@ const WesleyContainer = () => {
 
     function handleInputChange(event) {
         setUserQuery(event.target.value);
-        console.log(event.target.value)
       }
 
       function handleClear() {
@@ -55,7 +54,7 @@ const WesleyContainer = () => {
         if (buttonClicked) {
             get_random_response()
         }
-    }, [buttonClicked])
+    }, [get_random_response])
 
     return ( 
         <main>
